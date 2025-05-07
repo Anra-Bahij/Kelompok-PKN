@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Perkenalan Kelompok</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #0d0d0d;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .container {
+      text-align: center;
+      animation: fadeIn 2s ease-in;
+    }
+
+    h1 {
+      font-size: 3em;
+      color: #00ffe1;
+      text-shadow: 0 0 10px #00ffe1, 0 0 20px #00ffe1;
+      animation: glow 2s infinite alternate;
+      margin-bottom: 100px; /* Tambahkan jarak di sini */
+    }
+
+    .team {
+      font-size: 1.5em;
+      color: #ffffffcc;
+      animation: slideUp 1.5s ease-out;
+    }
+
+    .name {
+      margin: 10px 0;
+      color: #00c3ff;
+      text-shadow: 0 0 5px #00c3ff;
+      transition: transform 0.3s ease;
+    }
+
+    .name:hover {
+      transform: scale(1.1);
+      color: #00ffcc;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.9); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 10px #00ffe1; }
+      to { text-shadow: 0 0 20px #00ffe1, 0 0 30px #00ffe1; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Halo, Kami Dari Kelompok PENDIDIKAN PANCASILA!</h1>
+    <div class="team">
+        <a href="portofolio.html" class="button">1. Anra Syauqiy Bahij</a> (klik)
+  </section>
+      
+      <div class="name">2. Herdi</div>
+      <div class="name">3. Nizam Syamil Syamsudin</div>
+      <div class="name">4. Muhammad Raffa Khaerudin</div>
+      <div class="name">5. Jihan Binar Rahayu</div>
+      <div class="name">6. Amel Widya Prasetyani</div>
+    </div>
+  </div>
+</body>
+</html>

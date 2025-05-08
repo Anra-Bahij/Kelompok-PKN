@@ -1,117 +1,239 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Perkenalan Kelompok</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Anra Syauqiy Bahij - Portfolio</title>
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
   <style>
     body {
       margin: 0;
-      background-color: #0d0d0d;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      color: #fff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      overflow: hidden;
-      flex-direction: column;
-    }
-
-    .button {
-      background-color: #ff0000;
-      color: #000;
-      border: none;
-      padding: 15px 30px;
-      font-size: 1.2em;
-      font-weight: bold;
-      border-radius: 10px;
-      cursor: pointer;
-      margin: 20px 0;
-      box-shadow: 0 0 10px #ff0000;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .button:hover {
-      transform: scale(1.1);
-      box-shadow: 0 0 20px #00ff00;
+      font-family: 'Poppins', sans-serif;
+      background: #0f172a;
+      color: #ffffff;
+      scroll-behavior: smooth;
+      padding: 20px;
     }
 
     .container {
-      text-align: center;
-      animation: fadeIn 2s ease-in;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
     }
 
-    h1 {
-      font-size: 2.5em;
-      color: #00ffe1;
-      text-shadow: 0 0 10px #00ffe1, 0 0 20px #00ffe1;
-      margin-bottom: 20px;
-      min-height: 70px;
+    .header {
+      background: #1e293b;
+      padding: 20px 0;
     }
 
-    .team {
-      font-size: 1.5em;
-      color: #ffffffcc;
-      animation: slideUp 1.5s ease-out;
+    .logo {
+      font-size: 28px;
+      font-weight: bold;
     }
 
-    .name, .team a {
-      margin: 10px 0;
-      color: #00c3ff;
-      text-shadow: 0 0 5px #00c3ff;
-      transition: transform 0.3s ease;
-      display: block;
+    .nav {
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav a {
+      color: #94a3b8;
       text-decoration: none;
+      transition: color 0.3s;
     }
 
-    .name:hover, .team a:hover {
-      transform: scale(1.1);
-      color: #00ffcc;
+    .nav a:hover {
+      color: #0ea5e9;
     }
 
-    @keyframes fadeIn {
-      from { opacity: 0; transform: scale(0.9); }
-      to { opacity: 1; transform: scale(1); }
+    .hero {
+      text-align: center;
+      padding: 100px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      text-align: center;
+      height: 50vh;
+      padding-top: 40px;
     }
 
-    @keyframes slideUp {
-      from { opacity: 0; transform: translateY(50px); }
-      to { opacity: 1; transform: translateY(0); }
+    .hero h2 {
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 20px;
+      color: #cbd5e1;
+      margin-bottom: 20px;
+    }
+
+    .button {
+      display: block;
+      width: 150px;
+      margin: 20px 0;
+      padding: 15px;
+      text-align: center;
+      background-color: #4CAF50;
+      color: white;
+      text-decoration: none;
+      border-radius: 10px;
+      font-weight: bold;
+    }
+
+    .button:hover {
+      background-color: #0f172a;
+    }
+
+    #prinsip-btn {
+      background-color: #768ea8;
+      color: black;
+    }
+
+    #prinsip-btn:hover {
+      background-color: #0f172a;
+      color: white;
+    }
+
+    .music-button-container {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 30px;
+      background: #0ea5e9;
+      color: #000;
+      font-weight: bold;
+      border-radius: 30px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background: #0284c7;
+    }
+
+    .section {
+      padding: 80px 20px;
+    }
+
+    .projects-grid {
+      display: grid;
+      gap: 30px;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      margin-top: 40px;
+    }
+
+    .project-card {
+      background: #1e293b;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 15px rgba(0,0,0,0.3);
+    }
+
+    .footer {
+      background: #1e293b;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      color: #94a3b8;
     }
   </style>
-
-  <!-- Tambahkan link ke Typed.js -->
-  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 </head>
 <body>
 
-  <div class="container">
-    <h1><span id="typed-text"></span></h1>
-
-    <button class="button" onclick="document.getElementById('bg-music').play()">Play Music</button>
-    <audio id="bg-music" src="herdi.mp3"></audio>
-
-    <div class="team">
-      <a href="portofolio.html">1. Anra Syauqiy Bahij</a> (klik)
-      <div class="name">2. Herdiansyah</div>
-      <div class="name">3. Nizam Syamil Syamsudin</div>
-      <div class="name">4. Muhammad Raffa Khaerudin</div>
-      <div class="name">5. Jihan Binar Rahayu</div>
-      <div class="name">6. Amel Widya Prasetyani</div>
+  <header class="header">
+    <div class="container">
+      <h1 class="logo">Anra Syauqiy Bahij</h1>
+      <nav class="nav">
+        <a href="#about">about me</a>
+        <a href="#projects">Deeper</a>
+        <a href="#contact">Kontak</a>
+      </nav>
     </div>
-  </div>
+  </header>
 
-  <!-- Script untuk animasi ketik -->
+  <section class="hero" data-aos="fade-up">
+    <h2><span id="typed-text"></span></h2>
+    <p>Pengembang Web dan Mobile dari Cengkareng</p>
+    <a href="prinsip.html" class="button" id="prinsip-btn">Prinsip Hidup</a>
+  </section>
+
+  <!-- Tombol Play Music -->
+  <button class="button" onclick="document.getElementById('bg-music').play()">Play Music</button>
+  <audio id="bg-music" src="hacker.mp3"></audio>
+
+  <section id="about" class="section" data-aos="fade-right">
+    <div class="container">
+      <h2>Tentang Saya</h2>
+      <p>Seorang pelajar SMP yang memiliki 0 prestasi tetapi gemar membuat hal baru yang menantang. Senang berkenalan!</p>
+    </div>
+  </section>
+
+  <section id="projects" class="section" data-aos="fade-left">
+    <div class="container">
+      <h2>Lebih dalam tentang Saya</h2>
+      <div class="projects-grid">
+        <div class="project-card" data-aos="zoom-in">
+          <h3>My Project</h3>
+          <p>Mengembangkan website portofolio, glitch, dan membuat script whatsapp.</p>
+        </div>
+        <div class="project-card" data-aos="zoom-in" data-aos-delay="100">
+          <h3>Riwayat Sekolah</h3>
+          <p>SDN 14 CENGKARENG TIMUR dan SMPN 45 JAKARTA.</p>
+        </div>
+        <div class="project-card" data-aos="zoom-in" data-aos-delay="200">
+          <h3>Hobi Saya</h3>
+          <p>Bermain sepak bola dan game serta selalu kalah dalam hal percintaan.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <a href="tes.html" class="button">Lagu Favorite</a>
+  <a href="game.html" class="button" style="margin-top: 20px;">Game Favorite</a>
+
+  <section id="contact" class="section" data-aos="fade-up">
+    <div class="container text-center">
+      <h2>Kontak Saya</h2>
+      <p>Email: <a href="mailto:anrasyauqiybahij@gmail.com">anrasyauqiybahij@gmail.com</a></p>
+      <p>sosmed: <a href="https://www.tiktok.com/@anrasyauqiybahij26?_t=ZS-8vuLMn9sjIt&_r=1" target="_blank">tiktok</a></p>
+      <p>whatsapp: <a href="https://wa.me/6287722011556" target="_blank">chatme</a></p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    &copy; 2025 Bahij. All rights reserved.
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script>
+    // Inisialisasi animasi scroll
+    AOS.init({
+      duration: 2500,
+      once: true
+    });
+
+    // Inisialisasi efek mengetik
     var typed = new Typed('#typed-text', {
-      strings: ["Halo, Kami Dari Kelompok 1!", "Dari Mata Kuliah PENDIDIKAN PANCASILA!", "Selamat Datang di Website Kami!"],
+      strings: ["Hi, Saya Anra Syauqiy Bahij!", "Seorang Anak SMP.", "MARI BERKENALAN!"],
       typeSpeed: 50,
       backSpeed: 30,
       backDelay: 2500,
       loop: true
     });
   </script>
-
 </body>
 </html>

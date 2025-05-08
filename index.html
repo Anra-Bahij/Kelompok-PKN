@@ -27,7 +27,7 @@
       font-weight: bold;
       border-radius: 10px;
       cursor: pointer;
-      margin-bottom: 20px;
+      margin: 20px 0;
       box-shadow: 0 0 10px #00ff00;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
@@ -47,7 +47,7 @@
       color: #00ffe1;
       text-shadow: 0 0 10px #00ffe1, 0 0 20px #00ffe1;
       animation: glow 2s infinite alternate;
-      margin-bottom: 100px;
+      margin-bottom: 50px;
     }
 
     .team {
@@ -56,14 +56,16 @@
       animation: slideUp 1.5s ease-out;
     }
 
-    .name {
+    .name, .team a {
       margin: 10px 0;
       color: #00c3ff;
       text-shadow: 0 0 5px #00c3ff;
       transition: transform 0.3s ease;
+      display: block;
+      text-decoration: none;
     }
 
-    .name:hover {
+    .name:hover, .team a:hover {
       transform: scale(1.1);
       color: #00ffcc;
     }
@@ -86,14 +88,15 @@
 </head>
 <body>
 
-  <!-- Tombol Play Music -->
-  <button class="button" onclick="document.getElementById('bg-music').play()">Play Music</button>
-  <audio id="bg-music" src="herdi.mp3"></audio>
-
   <div class="container">
     <h1>Halo, Kami Dari Kelompok 1 PENDIDIKAN PANCASILA!</h1>
     <div class="team">
-      <a href="portofolio.html" class="button">1. Anra Syauqiy Bahij</a> (klik)
+      <a href="portofolio.html">1. Anra Syauqiy Bahij</a> (klik)
+
+      <!-- Tombol Play Music sekarang di bawah nama Anra -->
+      <button class="button" onclick="document.getElementById('bg-music').play()">Play Music</button>
+      <audio id="bg-music" src="herdi.mp3"></audio>
+
       <div class="name">2. Herdiansyah</div>
       <div class="name">3. Nizam Syamil Syamsudin</div>
       <div class="name">4. Muhammad Raffa Khaerudin</div>
@@ -101,5 +104,6 @@
       <div class="name">6. Amel Widya Prasetyani</div>
     </div>
   </div>
+
 </body>
 </html>

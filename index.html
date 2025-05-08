@@ -15,6 +15,26 @@
       justify-content: center;
       height: 100vh;
       overflow: hidden;
+      flex-direction: column;
+    }
+
+    .button {
+      background-color: #00ff00;
+      color: #000;
+      border: none;
+      padding: 15px 30px;
+      font-size: 1.2em;
+      font-weight: bold;
+      border-radius: 10px;
+      cursor: pointer;
+      margin-bottom: 20px;
+      box-shadow: 0 0 10px #00ff00;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .button:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 20px #00ff00;
     }
 
     .container {
@@ -27,7 +47,7 @@
       color: #00ffe1;
       text-shadow: 0 0 10px #00ffe1, 0 0 20px #00ffe1;
       animation: glow 2s infinite alternate;
-      margin-bottom: 100px; /* Tambahkan jarak di sini */
+      margin-bottom: 100px;
     }
 
     .team {
@@ -71,11 +91,9 @@
   <audio id="bg-music" src="herdi.mp3"></audio>
 
   <div class="container">
-        <h1>Halo, Kami Dari Kelompok 1 PENDIDIKAN PANCASILA!</h1>
+    <h1>Halo, Kami Dari Kelompok 1 PENDIDIKAN PANCASILA!</h1>
     <div class="team">
-        <a href="portofolio.html" class="button">1. Anra Syauqiy Bahij</a> (klik)
-  </section>
-      
+      <a href="portofolio.html" class="button">1. Anra Syauqiy Bahij</a> (klik)
       <div class="name">2. Herdiansyah</div>
       <div class="name">3. Nizam Syamil Syamsudin</div>
       <div class="name">4. Muhammad Raffa Khaerudin</div>

@@ -43,25 +43,11 @@
     }
 
     h1 {
-      font-size: 3em;
+      font-size: 2.5em;
       color: #00ffe1;
       text-shadow: 0 0 10px #00ffe1, 0 0 20px #00ffe1;
       margin-bottom: 20px;
-      white-space: nowrap;
-      overflow: hidden;
-      border-right: 3px solid #00ffe1;
-      width: 0;
-      animation: typing 4s steps(60, end) forwards, blink 0.8s step-end infinite;
-    }
-
-    @keyframes typing {
-      from { width: 0; }
-      to { width: 100%; }
-    }
-
-    @keyframes blink {
-      0%, 100% { border-color: transparent; }
-      50% { border-color: #00ffe1; }
+      min-height: 70px;
     }
 
     .team {
@@ -94,11 +80,14 @@
       to { opacity: 1; transform: translateY(0); }
     }
   </style>
+
+  <!-- Tambahkan link ke Typed.js -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 </head>
 <body>
 
   <div class="container">
-    <h1 id="typewriter">Halo,Kami Dari Kelompok 1 PENDIDIKAN PANCASILA!</h1>
+    <h1><span id="typed-text"></span></h1>
 
     <button class="button" onclick="document.getElementById('bg-music').play()">Play Music</button>
     <audio id="bg-music" src="herdi.mp3"></audio>
@@ -112,6 +101,17 @@
       <div class="name">6. Amel Widya Prasetyani</div>
     </div>
   </div>
+
+  <!-- Script untuk animasi ketik -->
+  <script>
+    var typed = new Typed('#typed-text', {
+      strings: ["Halo, Kami Dari Kelompok 1!", "Dari Mata Kuliah PENDIDIKAN PANCASILA!", "Selamat Datang di Website Kami!"],
+      typeSpeed: 50,
+      backSpeed: 30,
+      backDelay: 2500,
+      loop: true
+    });
+  </script>
 
 </body>
 </html>
